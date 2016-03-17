@@ -57,7 +57,7 @@ app.post('/tag/subscribe', function (req, res) {
                 console.log('unsubscribed from everything!');
                 instagram.tags.subscribe({
                     object_id: current_tag,
-                    callback_url: 'https://9c176eb1.ngrok.io/subscribe',
+                    callback_url: 'https://3b27a4af.ngrok.io/subscribe',
                     complete: function (subscribe_data) {
                         if (subscribe_data) {
                             res.send({ type: 'success' });
