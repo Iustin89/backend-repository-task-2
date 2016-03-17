@@ -34,7 +34,7 @@ var server = app.listen(4000, function () {
     var host = server.address().address
     var port = server.address().port
 
-    console.log('Aplicatia face listen la adresa http://%s:%s', host, port)
+    console.log('Aplicatia face listen la portu: ', host, port)
 });
 
 // ===================================================================================================================================
