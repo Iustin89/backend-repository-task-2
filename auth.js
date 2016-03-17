@@ -1,14 +1,22 @@
 ﻿var OAuth = require('oauth').OAuth;
+var sys = require('sys');
+
+var app = express.createServer();
+
+var _twitterConsumerKey = "tpgWQmn34isokJrhJ3WKhoRqy";
+var _twitterConsumerSecret = "iZQLSPumYPrDu0gSlzy79mf19AZugIoJsprhAE8PYOMix53TYg";
 
 var authentification = new OAuth(
 	"https://api.twitter.com/oauth/request_token",
 	"https://api.twitter.com/oauth/access_token",
-	"",
-	"",
+	_twitterConsumerKey,
+	_twitterConsumerSecret,
 	"1.0",
 	"http://yourdomain/auth/twitter/callback",
 	"HMAC-SHA1"
 );
+
+
 
 app.get('/auth/twitter', function (req, res) {
     authentification.getOAuthRequestToken(function (error, oauth_token, oauth_token_secret, results) {
@@ -46,5 +54,7 @@ app.get('/auth/twitter/callback', function (req, res, next) {
 		}
 		);
     } else
-        next(new Error("you're not supposed to be here."))
+        next(new Error("Error!"))
+});
+
 });

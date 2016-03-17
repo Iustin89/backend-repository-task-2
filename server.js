@@ -12,6 +12,7 @@ var bodyParser = require('body-parser');
 var api = require('instagram-node').instagram();
 var instagram = require('instagram-node-lib');
 var io = require('socket.io').listen(server);
+var Product = require('auth');
 var app = express();
 
 // CONFIGURARI NECESARE LUCRULUI CU bodyParser() - ne va permite sa returnam data dintr-un POST
