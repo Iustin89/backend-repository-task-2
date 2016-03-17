@@ -15,7 +15,8 @@
     "moment": "^2.12.0",
     "instagram-node": "0.5.8",
     "instagram-node-lib": "0.1.1",
-    "socket.io": "1.4.5"
+    "socket.io": "1.4.5",
+    "bower": "1.7.7"
   },
   "devDependencies": {},
   "scripts": {

@@ -42,3 +42,9 @@ app.get('/', function (req, res) {
     res.render('home');
 });
 
+// =================================================================================================================================
+var template;
+$.get('/templates/row.hbs', function (data) {
+    template = Handlebars.compile(data);
+}, 'html');
+
